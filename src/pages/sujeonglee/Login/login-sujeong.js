@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import "./Login.scss"
-
+console.log();
 class LoginSu extends React.Component{
     goToMain = () => {
         this.props.history.push('/Main');
