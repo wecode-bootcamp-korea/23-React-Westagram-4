@@ -2,7 +2,7 @@ import React from 'react';
 import "./Main.scss"
 
 
-class Main extends React.Component{
+class MainSu extends React.Component{
    
     render(){
         return(
@@ -48,9 +48,9 @@ class Main extends React.Component{
                     </div>
                     <div className="feedIcon">
                         <div className="feedIconLeft">
-                            <img alt="하트" src="images/heart.png"  className="leftIcon"/>
-                            <img alt="디엠" src="images/dm.png"  className="leftIcon"/>
-                            <img alt="공유" src="images/share.png"  className="leftIcon"/>
+                            <img alt="하트" src="assets/images/sujeonglee/heart.png"  className="leftIcon"/>
+                            <img alt="디엠" src="assets/images/sujeonglee/dm.png"  className="leftIcon"/>
+                            <img alt="공유" src="assets/mages/sujeonglee/share.png"  className="leftIcon"/>
                         </div>
                         <div className="feedIconRight">
                             <img alt="북마크" src="images/mark.png" />
@@ -235,4 +235,4 @@ class Main extends React.Component{
 
 
 
-export default Main;
+export default MainSu;

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import "./Login.scss"
 
-class Login extends React.Component{
+class LoginSu extends React.Component{
     goToMain = () => {
         this.props.history.push('/Main');
       }
@@ -23,5 +23,5 @@ class Login extends React.Component{
     }
 }
 
-export default withRouter(Login);
+export default withRouter(LoginSu);
  
