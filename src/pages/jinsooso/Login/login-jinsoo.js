@@ -1,7 +1,7 @@
 import React from "react";
 import "./login.scss"
 
-class Login extends React.Component {
+class LoginSoo extends React.Component {
 
   goToMain = () => {
     this.props.history.push('/Main');

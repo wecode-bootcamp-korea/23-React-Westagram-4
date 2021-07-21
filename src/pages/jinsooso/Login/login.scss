@@ -4,19 +4,6 @@
   box-sizing: border-box;
 }
 
-
-@mixin flex($flex-direction, $justify-content:center, $align-items:center){
-  display: flex;
-  justify-content: $justify-content;
-  align-items: $align-items;
-  flex-direction: $flex-direction;
-}
-
-@mixin wh($width,$height){
-  width:$width;
-  height:$height;
-}
-
 body {
   background-color: #fafafa;
   section {

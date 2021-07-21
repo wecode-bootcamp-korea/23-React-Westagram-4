@@ -1,9 +1,9 @@
-import LoginSoo from './pages/jinsooso/Login/Login';
+import LoginSoo from './pages/jinsooso/Login/login-jinsoo';
 import LoginHyun from './pages/hyunjunlee/Login/Login';
 import LoginNa from './pages/nahyunlee/Login/Login';
 import LoginSu from './pages/sujeonglee/Login/Login';
 
-import MainSoo from './pages/jinsooso/Main/Main';
+import MainSoo from './pages/jinsooso/Main/main-jinsoo';
 import MainNa from './pages/nahyunlee/Main/Main';
 import MainSu from './pages/sujeonglee/Main/Main';
 import MainHyun from './pages/hyunjunlee/Main/Main'

@@ -2,7 +2,7 @@ import React from 'react';
 import './main.scss';
 import { Link } from 'react-router-dom';
 
-class Main extends React.Component {
+class MainSoo extends React.Component {
   render() {
     return (
       <body>
