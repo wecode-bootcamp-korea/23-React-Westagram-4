@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.box {
+    position: absolute;
+    width: 262px;
+    height: 300px;
+    padding: 40px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    
+        h1 {
+        font-family: 'Lobster', cursive;
+        font-size: 40px;
+        margin-bottom: 50px;
+        cursor: default;
+      }
+        input[type = "text"],input[type = "password"] {
+        border: 0;
+        background: #fafafa;
+        display: block;
+        margin: 7px auto;
+        text-align: left;
+        border: 1px solid #efefef;
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        color: #262626;
+        border-radius: 4px;
+        font-size: 11px;
+        box-sizing: border-box;
+        font-weight: 400;
+    }
+        input[type = "text"]:focus,input[type = password]:focus {
+            color: black;
+            border: 2px solid gray;
+        }
+            button {
+                border: 0;
+                background: #bfdffd;
+                opacity: 1;
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                padding: 10px;
+                outline: none;
+                width: 100%;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 11px;
+                cursor: pointer;
+                color: white;
+            }
+        .link {
+            margin-top: 40px;
+        }
+            a {
+                font-size: 11px;
+                text-decoration: none;
+                color: black;
+
+            }
+}
