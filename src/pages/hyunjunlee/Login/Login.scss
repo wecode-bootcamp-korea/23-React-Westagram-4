@@ -1,67 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-.box {
-    position: absolute;
-    width: 262px;
-    height: 300px;
-    padding: 40px;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: white;
-    text-align: center;
-    border: 1px solid #e6e6e6;
-    border-radius: 1px;
-    margin: 0 0 10px;
-    
-        h1 {
-        font-family: 'Lobster', cursive;
-        font-size: 40px;
-        margin-bottom: 50px;
-        cursor: default;
-      }
-        input[type = "text"],input[type = "password"] {
-        border: 0;
-        background: #fafafa;
-        display: block;
-        margin: 7px auto;
-        text-align: left;
-        border: 1px solid #efefef;
-        padding: 10px;
-        width: 100%;
-        outline: none;
-        color: #262626;
-        border-radius: 4px;
-        font-size: 11px;
-        box-sizing: border-box;
-        font-weight: 400;
-    }
-        input[type = "text"]:focus,input[type = password]:focus {
-            color: black;
-            border: 2px solid gray;
-        }
-            button {
-                border: 0;
-                background: #bfdffd;
-                opacity: 1;
-                display: block;
-                margin: 20px auto;
-                text-align: center;
-                padding: 10px;
-                outline: none;
-                width: 100%;
-                border-radius: 4px;
-                font-weight: 600;
-                font-size: 11px;
-                cursor: pointer;
-                color: white;
-            }
-        .link {
-            margin-top: 40px;
-        }
-            a {
-                font-size: 11px;
-                text-decoration: none;
-                color: black;
+$font-Lobster: 'Lobster', cursive;
+$font-noto:'Noto Sans KR', sans-serif;
 
-            }
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+body {
+  position: relative;
+  width: 100%;
+}
+
+.login{
+  position: absolute;
+  @include flex-column; 
+  flex: auto;
+  justify-content: space-around;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 680px;
+  height: 700px;
+  border: 25px solid #fafafa;
+  background-color: white;
+
+  .westagram{
+    flex-grow: 2;
+    padding-top: 30px;
+    padding-bottom: 0;
+    font: 100% $font-Lobster;
+    font-size: 90px;
+  }
+
+  .userLogin{
+    flex-grow: 3;
+    @include flex-column; 
+
+
+    .id, .password, .loginButton{
+      height: 70px;
+      width: 480px;
+      margin: 10px;
+      padding: 5px;
+    }
+
+    .id, .password {
+      padding-left: 10px;
+      border: 1px solid #efefef;
+      border-radius: 5px;
+      background-color: #fafafa;
+    }
+
+    .id {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      background-color: #fafafa;
+    
+      &::placeholder {
+        color: #9B9B9B;
+        font: 100% $font-noto;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .password {
+      margin-top: 5px;
+
+      &::placeholder {
+        color: #9B9B9B;
+        font: 100% $font-noto;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .loginButton {
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      background-color: #C4E1FB;
+      color: white;
+      font-size: 20px;
+      font: 100% $font-noto;
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .helpPassword{
+    flex-grow: 2;
+    padding-top: 20px;
+    color:  #003569;
+    font: 100% $font-noto;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
