@@ -3,7 +3,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './Login.scss'
 
-class Login extends React.Component {
+class LoginHyun extends React.Component {
 
   goToMain = () => {
     this.props.history.push('/main')
@@ -25,4 +25,4 @@ class Login extends React.Component {
   }
 }
 
-export default withRouter(Login);
+export default withRouter(LoginHyun);

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.scss'
 
-class Main extends React.Component {
+class MainHyun extends React.Component {
   render() {
     return (
       <div className='main'>
@@ -122,4 +122,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default MainHyun;
