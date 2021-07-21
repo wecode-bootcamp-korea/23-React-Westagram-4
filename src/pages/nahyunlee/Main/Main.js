@@ -1,18 +1,19 @@
 import React from 'react';
 import './Main.scss'
 
-class Main extends React.Component {
+class MainNa extends React.Component {
   render() {
     return (
       <div className='main'>
+        <NavNa />
         <nav className="mainpage">
           <div className="mainpageWidth">
-            <img className="logo" src="img/logo.png" alt="" />
+            <img className="logo" src="assets/img/nahyun/logo.png" alt="" />
             <input className="search" type="text" placeholder="검색" />
             <ul className="navimg">
-              <li><img className="navicon1" alt="exploreIcon" src="img/explore.png" /></li>
-              <li><img className="navicon2" alt="heartIcon" src="img/heart.png" /></li>
-              <li><img className="nhprofile" alt="profile" src="img/profile.jpg" /></li>
+              <li><img className="navicon1" alt="exploreIcon" src="assets/img/nahyun/explore.png" /></li>
+              <li><img className="navicon2" alt="heartIcon" src="assets/img/nahyun/heart.png" /></li>
+              <li><img className="nhprofile" alt="profile" src="assets/img/nahyun/profile.jpg" /></li>
             </ul>
           </div>
         </nav>
@@ -21,7 +22,7 @@ class Main extends React.Component {
           <div className="feeds">
             <article className="article">
               <div className="account">
-                <img className="profile" src="img/profile.jpg" />
+                <img className="profile" src="assets/img/nahyun/profile.jpg" />
                 <p className="accountName"><b>hyonii_xx</b></p>
                 <i className="fas fa-ellipsis-h"></i>
               </div>
@@ -122,4 +123,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default MainNa;
