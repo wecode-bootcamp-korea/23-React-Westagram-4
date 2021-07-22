@@ -21,7 +21,7 @@ class LoginSu extends React.Component {
             <button onClick={this.goToMain} className="btnLogin">
               로그인{' '}
             </button>
-            <a href="#">
+            <a href="fdsaf">
               <span className="pwForgot">비밀번호를 잊으셨나요?</span>
             </a>
           </form>

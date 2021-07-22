@@ -56,7 +56,7 @@ class MainSu extends React.Component {
                         />
                       </div>
                       <span className="profileName">
-                        <a href="#">roses_are_rosie</a>
+                        <a href="fdsafsa">roses_are_rosie</a>
                       </span>
                     </div>
                     <div className="profileIcon">
@@ -102,7 +102,7 @@ class MainSu extends React.Component {
                     />
                   </div>
                   <span className="likeInfo">
-                    <a href="#">
+                    <a href="fdsaf">
                       <span>k_rystalee</span>님 <span>외 10명</span>이
                       좋아합니다
                     </a>
@@ -234,7 +234,7 @@ class MainSu extends React.Component {
                     </div>
                   </div>
                   <span className="recommendFollow">
-                    <a href="#">팔로우</a>
+                    <a href="dasf">팔로우</a>
                   </span>
                 </div>
                 <div className="recommendContent">
@@ -252,7 +252,7 @@ class MainSu extends React.Component {
                     </div>
                   </div>
                   <span className="recommendFollow">
-                    <a href="#">팔로우</a>
+                    <a href="asf">팔로우</a>
                   </span>
                 </div>
                 <div className="recommendContent">
@@ -270,7 +270,7 @@ class MainSu extends React.Component {
                     </div>
                   </div>
                   <span className="recommendFollow">
-                    <a href="#">팔로우</a>
+                    <a href="safs">팔로우</a>
                   </span>
                 </div>
               </div>
