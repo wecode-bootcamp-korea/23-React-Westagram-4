@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.scss"
-import "./Common.scss"
+import "./common.scss"
 
 class MainHyun extends React.Component {
     render() {
