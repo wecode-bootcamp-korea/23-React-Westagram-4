@@ -1,6 +1,10 @@
 import React from 'react';
-import { Router, Switch } from 'react-router';
-import Nav from './components/Nav/Nav';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+  } from 'react-router-dom';
+import Nav from '../src/components/Nav/Nav';
 
 import LoginSoo from './pages/jinsooso/Login/login-jinsoo';
 import LoginHyun from './pages/hyunjunlee/Login/login-hyunjun';

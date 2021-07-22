@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './common.scss';
-import './reset.scss';
+import './styles/common.scss';
+import './styles/reset.scss';
+import Routes from './Routes';
 
 ReactDOM.render(
-    // eslint-disable-next-line react/jsx-no-undef
+   
     <Routes />,
   
   document.getElementById('root')
