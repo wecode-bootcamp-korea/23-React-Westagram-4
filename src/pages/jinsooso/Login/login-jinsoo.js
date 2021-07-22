@@ -129,4 +129,4 @@ class LoginSoo extends React.Component {
   }
 }
 
-export default Login;
+export default LoginSoo;
