@@ -4,6 +4,9 @@ import React from 'react';
 
 class MainHyun extends React.Component {
   render() {
+<<<<<<< HEAD
+    return <div></div>;
+=======
     return (
       <div>
         <header className="header">
@@ -256,6 +259,7 @@ class MainHyun extends React.Component {
         </div>
       </div>
     );
+>>>>>>> c0b9e464f0cd58403159fb56ec68553e1dba01db
   }
 }
 
