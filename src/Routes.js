@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from '../src/components/Nav/Nav';
 
@@ -18,17 +19,17 @@ class Routes extends React.Component {
       <Router>
         <Nav exact path="/Nav" component={Nav} />
         <Switch>
-          <Routes exact path="/login-jinsoo" component={LoginSoo} />
-          <Routes exact path="/main-jinsoo" component={MainSoo} />
+          <Route exact path="/login-jinsoo" component={LoginSoo} />
+          <Route exact path="/main-jinsoo" component={MainSoo} />
 
-          <Routes exact path="/login-nahyun" component={LoginNa} />
-          <Routes exact path="/main-nahyun" component={MainNa} />
+          <Route exact path="/login-nahyun" component={LoginNa} />
+          <Route exact path="/main-nahyun" component={MainNa} />
 
-          <Routes exact path="/login-sujeong" component={LoginSu} />
-          <Routes exact path="/main-sujeong" component={MainSu} />
+          <Route exact path="/login-sujeong" component={LoginSu} />
+          <Route exact path="/main-sujeong" component={MainSu} />
 
-          <Routes exact path="/login-hyunjun" component={LoginHyun} />
-          <Routes exact path="/main-hyunjun" component={MainHyun} />
+          <Route exact path="/login-hyunjun" component={LoginHyun} />
+          <Route exact path="/main-hyunjun" component={MainHyun} />
         </Switch>
       </Router>
     );

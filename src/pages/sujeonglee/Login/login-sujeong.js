@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import './login-sujeong.scss';
 
 class LoginSu extends React.Component {
-<<<<<<< HEAD
   goToMain = () => {
     this.props.history.push('/main-sujeong');
   };
@@ -33,11 +32,3 @@ class LoginSu extends React.Component {
 }
 
 export default withRouter(LoginSu);
-=======
-  render() {
-    return <div></div>;
-  }
-}
-
-export default LoginSu;
->>>>>>> c0b9e464f0cd58403159fb56ec68553e1dba01db
