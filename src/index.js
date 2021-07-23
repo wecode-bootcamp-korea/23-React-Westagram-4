@@ -5,8 +5,7 @@ import './styles/reset.scss';
 import Routes from './Routes';
 
 ReactDOM.render(
-   
-    <Routes />,
-  
+  <Routes />,
+
   document.getElementById('root')
 );
