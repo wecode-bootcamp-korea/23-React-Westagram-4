@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, { Component } from 'react';
+import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
 import './Nav.scss';
 import searchImg from '../../assets/background-images/pngwing.png';
 // import logo from "../../../public/images/hyunjunlee/instagram"
@@ -30,9 +29,18 @@ class Nav extends React.Component {
               />
             </div>
             <div className="nav">
-              <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" />
-              <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
-              <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" />
+              <img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                alt="#"
+              />
+              <img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                alt="#"
+              />
+              <img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                alt="#"
+              />
             </div>
           </div>
         </div>
