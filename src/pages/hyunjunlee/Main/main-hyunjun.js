@@ -1,8 +1,33 @@
+/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './Main.scss';
 
 class MainHyun extends React.Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     value: '',
+  //     commentList: [{ text: '' }],
+  //   };
+  // }
+  // inputComment = e => {
+  //   this.setState({ value: e.target.value });
+  // };
+  // pressEnter = e => {
+  //   if (e.key === 'Enter') {
+  //     this.submitComment(e);
+  //   }
+  // };
+  // submitComment = e => {
+  //   e.preventDefault();
+  //   const comment = {
+  //     text: this.state.value,
+  //   };
+  //   this.setState({
+  //     commentList: this.state.commentList.concat(comment),
+  //   });
+  // };
   render() {
     return (
       <div>
@@ -95,30 +120,37 @@ class MainHyun extends React.Component {
                               </div>
                             </li>
                           </ul>
+                          {/* <ul className="textBox">
+                            {this.state.commentList.map(el => (
+                              <li>xx_ia.97:{el.text}</li>
+                            ))}
+                          </ul> */}
                           <div className="feed_time">
                             <p className="time">4시30분</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <form className="comments_form">
+                    <div className="comments_form">
                       <div className="input_box">
                         <input
                           type="text"
                           placeholder="댓글달기..."
                           id="comment_input"
+                          // onChange={this.inputComment}
+                          // onKeyDown={this.pressEnter}
                         />
                       </div>
                       <div className="button_box">
                         <button
                           type="button"
                           className="btn"
-                          disabled="disabled"
+                          // onClick={this.submitComment}
                         >
                           <span>게시</span>
                         </button>
                       </div>
-                    </form>
+                    </div>
                   </li>
                 </ul>
               </div>
