@@ -1,27 +1,36 @@
+/* eslint-disable no-undef */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import './Main.scss';
 
 class MainHyun extends React.Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     value: '',
+  //     commentList: [{ text: '' }],
+  //   };
+  // }
+  // inputComment = e => {
+  //   this.setState({ value: e.target.value });
+  // };
+  // pressEnter = e => {
+  //   if (e.key === 'Enter') {
+  //     this.submitComment(e);
+  //   }
+  // };
+  // submitComment = e => {
+  //   e.preventDefault();
+  //   const comment = {
+  //     text: this.state.value,
+  //   };
+  //   this.setState({
+  //     commentList: this.state.commentList.concat(comment),
+  //   });
+  // };
   render() {
     return (
       <div>
-        <header className="header">
-          <div className="header_wrap">
-            <div className="inner">
-              <h1 className="logo">
-                <img src="./-images/instagram.png" />
-                westagram
-              </h1>
-              <div className="input_box">
-                <input type="text" placeholder="검색" id="search" />
-              </div>
-              <nav className="nav">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" />
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" />
-              </nav>
-            </div>
-          </div>
-        </header>
         <div className="main">
           <div className="container">
             <div className="contents_left">
@@ -32,48 +41,67 @@ class MainHyun extends React.Component {
                       <div className="profile">
                         <img
                           className="profile_img"
-                          src="./-images/profile.png"
+                          src="../../images/hyunjunlee/profile.png"
+                          alt="#"
                         />
                         <p className="profile_id">xx_ia.97</p>
                       </div>
-                      <button type="button" className="state_btn">
-                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png" />
-                      </button>
+                      <div className="profile_add link_list">
+                        <button type="button" className="state_btn">
+                          <img
+                            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png"
+                            alt="#"
+                          />
+                        </button>
+                      </div>
                     </div>
                     <div className="feed_box">
-                      <img src="./-images/feed.png" />
+                      <img src="/images/hyunjunlee/feed.png" alt="#" />
                     </div>
                     <div className="feed_info">
                       <div className="feed_state">
                         <ul className="link_list">
                           <li>
                             <button type="button" className="state_btn">
-                              <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+                              <img
+                                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                                alt="#"
+                              />
                             </button>
                           </li>
                           <li>
                             <button type="button" className="state_btn">
-                              <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png" />
+                              <img
+                                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png"
+                                alt="#"
+                              />
                             </button>
                           </li>
                           <li>
                             <button type="button" className="state_btn">
-                              <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png" />
+                              <img
+                                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png"
+                                alt="#"
+                              />
                             </button>
                           </li>
                         </ul>
-                        <div className="link_list">
+                        <div className="link_lists">
                           <button type="button" className="state_btn">
-                            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png" />
+                            <img
+                              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png"
+                              alt="#"
+                            />
                           </button>
                         </div>
                       </div>
                       <div className="feed_comments">
-                        <div className="feed_likes">
+                        <div className="feed_likes comments_margin">
                           <div className="likes_user profile">
                             <img
-                              src="./-images/profile.png"
+                              src="../../images/hyunjunlee/profile.png"
                               className="profile_img"
+                              alt="#"
                             />
                           </div>
                           <div className="comments_info comment_list_ul">
@@ -83,7 +111,7 @@ class MainHyun extends React.Component {
                             </p>
                           </div>
                         </div>
-                        <div className="comment_list">
+                        <div className="comment_list comments_margin">
                           <ul className="comments_info comment_list_ul">
                             <li>
                               <div className="comments_tit">
@@ -92,39 +120,50 @@ class MainHyun extends React.Component {
                               </div>
                             </li>
                           </ul>
+                          {/* <ul className="textBox">
+                            {this.state.commentList.map(el => (
+                              <li>xx_ia.97:{el.text}</li>
+                            ))}
+                          </ul> */}
                           <div className="feed_time">
                             <p className="time">4시30분</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <form className="comments_form">
+                    <div className="comments_form">
                       <div className="input_box">
                         <input
                           type="text"
                           placeholder="댓글달기..."
                           id="comment_input"
+                          // onChange={this.inputComment}
+                          // onKeyDown={this.pressEnter}
                         />
                       </div>
                       <div className="button_box">
                         <button
                           type="button"
                           className="btn"
-                          disabled="disabled"
+                          // onClick={this.submitComment}
                         >
                           <span>게시</span>
                         </button>
                       </div>
-                    </form>
+                    </div>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="contents_right">
               <aside className="aside">
-                <div className="feed_profile">
+                <div className="feed_profile aside_profile">
                   <div className="profile">
-                    <img src="./-images/profile.png" className="profile_imgs" />
+                    <img
+                      src="../../images/hyunjunlee/profile.png"
+                      className="profile_imgs"
+                      alt="#"
+                    />
                     <div className="profile_info">
                       <p className="profile_id">xx_ia.97</p>
                       <p className="profile_intro">자기소개</p>
@@ -132,7 +171,7 @@ class MainHyun extends React.Component {
                   </div>
                 </div>
                 <div className="follow">
-                  <div className="follow_info">
+                  <div className="follow_info follow_story">
                     <div className="follow_title">
                       <span className="text_tit">스토리</span>
                       <a href="#">
@@ -144,7 +183,8 @@ class MainHyun extends React.Component {
                         <li>
                           <img
                             className="profile_img"
-                            src="./-images/profile.png"
+                            src="../../images/hyunjunlee/profile.png"
+                            alt="#"
                           />
                           <div className="profile_info">
                             <p className="profile_id">xx_ia.97</p>
@@ -154,7 +194,8 @@ class MainHyun extends React.Component {
                         <li>
                           <img
                             className="profile_img"
-                            src="./-images/profile.png"
+                            src="../../images/hyunjunlee/profile.png"
+                            alt="#"
                           />
                           <div className="profile_info">
                             <p className="profile_id">xx_ia.97</p>
@@ -164,7 +205,8 @@ class MainHyun extends React.Component {
                         <li>
                           <img
                             className="profile_img"
-                            src="./-images/profile.png"
+                            src="../../images/hyunjunlee/profile.png"
+                            alt="#"
                           />
                           <div className="profile_info">
                             <p className="profile_id">xx_ia.97</p>
@@ -174,7 +216,8 @@ class MainHyun extends React.Component {
                         <li>
                           <img
                             className="profile_img"
-                            src="./-images/profile.png"
+                            src="../../images/hyunjunlee/profile.png"
+                            alt="#"
                           />
                           <div className="profile_info">
                             <p className="profile_id">xx_ia.97</p>
@@ -184,7 +227,7 @@ class MainHyun extends React.Component {
                       </ul>
                     </div>
                   </div>
-                  <div className="follow_info">
+                  <div className="follow_info follow_story">
                     <div className="follow_title">
                       <span className="text_tit">회원님을 위한 추천</span>
                       <a href="#">
@@ -195,8 +238,9 @@ class MainHyun extends React.Component {
                       <ul className="profile follow_list">
                         <li>
                           <img
-                            className="profile_img"
-                            src="./-images/profile.png"
+                            className="profile_imgs"
+                            src="../../images/hyunjunlee/profile.png"
+                            alt="#"
                           />
                           <div className="profile_info">
                             <p className="profile_id">xx_ia.97</p>
@@ -212,8 +256,9 @@ class MainHyun extends React.Component {
                         </li>
                         <li>
                           <img
-                            className="profile_img"
-                            src="./-images/profile.png"
+                            className="profile_imgs"
+                            src="../../images/hyunjunlee/profile.png"
+                            alt="#"
                           />
                           <div className="profile_info">
                             <p className="profile_id">xx_ia.97</p>
@@ -229,8 +274,9 @@ class MainHyun extends React.Component {
                         </li>
                         <li>
                           <img
-                            className="profile_img"
-                            src="./-images/profile.png"
+                            className="profile_imgs"
+                            src="../../images/hyunjunlee/profile.png"
+                            alt="#"
                           />
                           <div className="profile_info">
                             <p className="profile_id">xx_ia.97</p>
