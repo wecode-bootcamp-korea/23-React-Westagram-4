@@ -1,4 +1,5 @@
 import React from 'react';
+import IdPwBtn from './idpwvalid';
 import './login.scss';
 
 class LoginSoo extends React.Component {
@@ -19,23 +20,7 @@ class LoginSoo extends React.Component {
               <section id="section-main">
                 <div className="top">
                   <h1 id="logo">westagram</h1>
-                  <input
-                    className="input-all"
-                    id="id"
-                    type="text"
-                    placeholder="전화번호, 사용자 이름 또는 이메일"
-                  />
-                  <input
-                    className="input-all"
-                    id="password"
-                    type="text"
-                    placeholder="비밀번호"
-                  />
-                  <div className="button-container">
-                    <button className="button-login" onClick={this.goToMain}>
-                      로그인
-                    </button>
-                  </div>
+                  <IdPwBtn />
                   <div id="or-container">
                     <div className="dash"></div>
                     <div id="or">또는</div>

@@ -42,7 +42,7 @@ class MainSu extends React.Component {
               </div>
             </nav>
           </div>
-          <main>
+          <main id="sujeong-main">
             <div className="feed">
               <article>
                 <header>
