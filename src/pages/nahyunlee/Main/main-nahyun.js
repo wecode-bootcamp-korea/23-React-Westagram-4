@@ -2,7 +2,7 @@ import React from 'react';
 //import CommentList from '../Comment/CommentList';
 import Nav from '../../../components/Nav/Nav';
 
-import './Main.scss';
+import './MainNa.scss';
 
 class Main extends React.Component {
   constructor(props) {
