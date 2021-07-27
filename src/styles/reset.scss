@@ -120,7 +120,7 @@ q {
 blockquote {
   &:before,
   &:after {
-    content: "";
+    content: '';
     content: none;
   }
 }
@@ -128,7 +128,7 @@ blockquote {
 q {
   &:before,
   &:after {
-    content: "";
+    content: '';
     content: none;
   }
 }
@@ -136,4 +136,9 @@ q {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+li,
+a {
+  text-decoration: none;
 }
