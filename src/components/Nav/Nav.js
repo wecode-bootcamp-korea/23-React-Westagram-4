@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/alt-text */
 // eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
-import './Nav.scss';
 import searchImg from '../../assets/background-images/pngwing.png';
 // import logo from '../../../public/images/hyunjunlee/instagram';
 

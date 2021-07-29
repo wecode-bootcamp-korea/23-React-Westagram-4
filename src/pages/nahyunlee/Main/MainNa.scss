@@ -18,7 +18,7 @@ $font-noto:'Noto Sans KR', sans-serif;
 
 
 /*mainpage*/
-.main {
+.mainNa {
   font: 100% $font-noto;
   .mainpage {
     @include flex-center;
@@ -101,6 +101,7 @@ $font-noto:'Noto Sans KR', sans-serif;
         p {
           margin-right: 430px;
           font-size: 15px;
+          font-weight: bold;
         }
 
         i{
@@ -154,7 +155,16 @@ $font-noto:'Noto Sans KR', sans-serif;
         .description {
           padding-bottom: 10px;
           font-size: 14px;
+
+          .descriptionId {
+            font-weight: bold;
+            padding-bottom: 10px;
+          }
+          .descriptionDetail {
+            line-height: 20px;
+          }
         }
+      }
 
         .time {
           padding-bottom: 10px;
@@ -336,4 +346,4 @@ $font-noto:'Noto Sans KR', sans-serif;
       }
     }
   }
-}
+
