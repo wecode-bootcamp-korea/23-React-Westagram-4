@@ -58,7 +58,7 @@ class CommentList extends React.Component {
   }
 
   render() {
-    const comments = this.state.commentList.map((reply, i) => (
+    const comments = this.state.commentList.map(reply => (
       <li className="newCommentList" key={reply.keyId}>
         <span className="commentText">
           <span className="commenetUserId">{reply.userId}</span>
@@ -66,7 +66,6 @@ class CommentList extends React.Component {
         </span>
         <span className="newCommentIcon">
           <img
-            key={i}
             alt="하트"
             src={
               this.state.changeButton === true

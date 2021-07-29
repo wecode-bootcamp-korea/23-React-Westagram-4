@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
-=======
-/* eslint-disable no-undef */
-/* eslint-disable jsx-a11y/anchor-is-valid */
->>>>>>> 169b68baf2a404b58838e5b532ad443ac62f7169
 import React from 'react';
 import './Main.scss';
 

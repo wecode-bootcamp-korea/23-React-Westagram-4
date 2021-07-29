@@ -4,8 +4,6 @@ import { withRouter, Link } from 'react-router-dom';
 import './login-sujeong.scss';
 
 class LoginSu extends React.Component {
-<<<<<<< HEAD
-=======
   constructor(props) {
     super(props);
     this.state = {
@@ -27,10 +25,6 @@ class LoginSu extends React.Component {
     });
   };
 
-<<<<<<< HEAD
-  // goToMain = () => {
-  //   this.props.history.push('/main-sujeong');
-  // };
   handleLogin = e => {
     e.preventDefault();
     fetch('http://10.58.0.190:8000/users/signin', {
@@ -66,15 +60,12 @@ class LoginSu extends React.Component {
       .then(data => {
         console.log('data:----', data);
       });
-=======
->>>>>>> 169b68baf2a404b58838e5b532ad443ac62f7169
-  goToMain = () => {
-    this.props.history.push('/main-sujeong');
->>>>>>> 9d6ae0ca443858e9335d079c41efd32f39400e5b
   };
+  // goToMain = () => {
+  //   this.props.history.push('/main-sujeong');
+  // };
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <div className="loginContainer">
@@ -108,7 +99,7 @@ class LoginSu extends React.Component {
                 this.state.buttonOn ? 'oncolor' : 'offcolor'
               }`}
             >
-              로그인{' '}
+              로그인
             </button>
             <Link to="/about">
               <span className="pwForgot">비밀번호를 잊으셨나요?</span>
