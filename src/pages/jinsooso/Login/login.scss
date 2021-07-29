@@ -9,9 +9,9 @@
   height: $height;
 }
 
-body {
+#jinsoo-div {
   background-color: #fafafa;
-  section {
+  .section-ff {
     @include flex(column);
     // display: flex;
     // justify-content: center;
@@ -30,7 +30,7 @@ body {
   }
 }
 
-#section-main {
+.section-main {
   @include wh(350px, 606px);
   // width: 350px;
   // height: 606px;

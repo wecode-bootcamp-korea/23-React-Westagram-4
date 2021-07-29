@@ -16,5 +16,11 @@
     "userName": "jayPark",
     "content": "Hey.",
     "isLiked": false
+  },
+  {
+    "id": 4,
+    "userName": "jinsoo",
+    "content": "Hello.",
+    "isLiked": false
   }
 ]
