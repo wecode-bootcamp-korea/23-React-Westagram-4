@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
 import './Nav.scss';
 import searchImg from '../../assets/background-images/pngwing.png';
-// import logo from "../../../public/images/hyunjunlee/instagram"
+// import logo from '../../../public/images/hyunjunlee/instagram';
 
 class Nav extends React.Component {
   render() {
