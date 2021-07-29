@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
 
 class Aside extends React.Component {
   render() {
@@ -153,4 +152,4 @@ class Aside extends React.Component {
   }
 }
 
-export default withRouter(Aside);
+export default Aside;

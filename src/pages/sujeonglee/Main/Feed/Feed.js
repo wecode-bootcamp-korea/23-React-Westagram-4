@@ -1,6 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import Post from '../Post/Post';
+import CommentList from './commentList';
 
 class Feed extends React.Component {
   render() {
@@ -74,20 +73,7 @@ class Feed extends React.Component {
                 </a>
               </span>
             </div>
-            <Post />
-            <div className="timeLog">
-              <span>40분전</span>
-            </div>
-            <div className="commentContainer">
-              <input
-                type="text"
-                placeholder="댓글 달기..."
-                className="commentBox"
-              />
-              <button type="submit" className="commentSubmit" disabled>
-                게시
-              </button>
-            </div>
+            <CommentList />
           </article>
         </div>
       </>
@@ -95,4 +81,4 @@ class Feed extends React.Component {
   }
 }
 
-export default withRouter(Feed);
+export default Feed;

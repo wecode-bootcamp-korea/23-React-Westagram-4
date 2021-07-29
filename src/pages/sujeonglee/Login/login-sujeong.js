@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
+// import LoginData from './logindata';
 import './login-sujeong.scss';
 
 class LoginSu extends React.Component {
@@ -20,22 +21,62 @@ class LoginSu extends React.Component {
     const { value, name } = e.target;
     this.setState({
       [name]: value,
+      commentList: [],
     });
   };
 
-  goToMain = () => {
-    this.props.history.push('/main-sujeong');
+  // goToMain = () => {
+  //   this.props.history.push('/main-sujeong');
+  // };
+  handleLogin = e => {
+    e.preventDefault();
+    fetch('http://10.58.0.190:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.userId,
+        password: this.state.userPw,
+      }),
+    })
+      .then(res => res.json())
+      .then(data => {
+        !data.TOKEN
+          ? alert('입력을 확인해주세요')
+          : this.props.history.push('/main-sujeong', this.state.userId);
+
+        console.log('data:----', data);
+      });
   };
+
+  handleSignUp = () => {
+    fetch('http://10.58.0.190:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.userId,
+        password: this.state.userPw,
+        name: 'b',
+        phone_number: '0',
+        age: 20,
+        nickname: 'd',
+      }),
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log('data:----', data);
+      });
+  };
+
   render() {
     console.log(this.state);
     return (
       <div>
-        <div className="container">
+        <div className="loginContainer">
           <h1>Westagram</h1>
+          <button onClick={this.handleSignUp}>계정가입하기</button>
           <form
             action="/Main"
             className="loginform"
             onChange={this.ButtonColor}
+            onSubmit={this.handleLogin}
           >
             <input
               type="text"

@@ -9,10 +9,12 @@ class MainSu extends React.Component {
     return (
       <div>
         <Nav />
-        <main>
-          <Feed />
-          <Aside />
-        </main>
+        <div id="containerColor">
+          <main className="mainContainer">
+            <Feed />
+            <Aside />
+          </main>
+        </div>
       </div>
     );
   }
