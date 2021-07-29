@@ -12,7 +12,7 @@ $theme-color: #fff;
   font-size: 16px;
 }
 
-.container {
+.loginContainer {
   @include flex-set;
   margin: 200px auto;
   width: 400px;

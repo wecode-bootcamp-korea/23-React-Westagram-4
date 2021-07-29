@@ -25,27 +25,27 @@ class Login extends React.Component {
     });
   };
 
-  goToMain = () => {
-    this.props.history.push('/main-nahyun');
-  };
-
   // goToMain = () => {
-  //   const { idValue, pwValue } = this.state;
-  //   fetch('http://10.58.1.205:8000/users/login', {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       email: idValue,
-  //       password: pwValue,
-  //     }),
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       if (result.token) {
-  //         localStorage.setItem('token', result.token);
-  //         this.props.history.push('/main-nahyun');
-  //       } else alert('아이디/비밀번호를 다시 입력해주세요!');
-  //     });
+  //   this.props.history.push('/main-nahyun');
   // };
+
+  goToMain = () => {
+    const { idValue, pwValue } = this.state;
+    fetch('http://10.58.1.205:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.token) {
+          localStorage.setItem('token', result.token);
+          this.props.history.push('/main-nahyun');
+        } else alert('아이디/비밀번호를 다시 입력해주세요!');
+      });
+  };
 
   render() {
     return (
