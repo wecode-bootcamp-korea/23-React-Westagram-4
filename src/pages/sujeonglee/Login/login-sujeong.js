@@ -3,29 +3,6 @@ import { withRouter, Link } from 'react-router-dom';
 import './login-sujeong.scss';
 
 class LoginSu extends React.Component {
-<<<<<<< HEAD
-=======
-  constructor(props) {
-    super(props);
-    this.state = {
-      userId: '',
-      userPw: '',
-      buttonOn: false,
-    };
-  }
-  ButtonColor = () => {
-    this.state.userId.includes('@') && this.state.userPw.length >= 5
-      ? this.setState({ buttonOn: true })
-      : this.setState({ buttonOn: false });
-  };
-  handleIuput = e => {
-    const { value, name } = e.target;
-    this.setState({
-      [name]: value,
-    });
-  };
-
->>>>>>> 169b68baf2a404b58838e5b532ad443ac62f7169
   goToMain = () => {
     this.props.history.push('/main-sujeong');
   };

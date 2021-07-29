@@ -6,7 +6,7 @@ $font-noto:'Noto Sans KR', sans-serif;
   flex-direction: column;
 }
 
-.login{
+.loginNa{
   position: absolute;
   @include flex-column; 
   flex: auto;
@@ -85,6 +85,16 @@ $font-noto:'Noto Sans KR', sans-serif;
       &:hover {
         cursor: pointer;
       }
+    }
+    .offloginButton {
+      height: 50px;
+      background-color: #348ceb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font: 100% $font-noto;
+      font-weight: bold;
     }
   }
 
