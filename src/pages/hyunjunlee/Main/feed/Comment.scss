@@ -1,0 +1,36 @@
+.comments_form {
+  position: relative;
+
+  .input_box {
+    position: relative;
+    width: 100%;
+    height: 45px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+      border: 1px solid #dbdbdb;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      font-size: 15px;
+    }
+  }
+
+  .button_box {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+
+    .btn {
+      border: none;
+
+      span {
+        font-size: 15px;
+        color: #bfdffd;
+      }
+    }
+  }
+}

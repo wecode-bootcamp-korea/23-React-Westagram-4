@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import LoginSoo from './pages/jinsooso/Login/login-jinsoo';

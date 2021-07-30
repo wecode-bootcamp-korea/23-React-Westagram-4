@@ -1,49 +1,48 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
+import Comment from './feed/Comment';
+//import COMMENTDATA from '../../../../public/data/CommentDate';
+import './CommentList.scss';
 
 class CommentList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       commentList: [],
-      commentValue: '',
     };
   }
 
-  componentDidCatch() {
-    fetch('http://localhost:3001/data/commentDate.json', {
-      method: 'GET',
-    });
-    .then(res => res.json());
-    .then(res => {
-      this.setState({
-        commentList: res.data,
+  componentDidMount() {
+    fetch('http://localhost:3000/data/commentDate.json', {
+      method: 'POST',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          commentList: data,
+        });
       });
-    });
   }
 
   render() {
-    const { commentList, commentValue } = this.state;
+    const { commentList } = this.state;
 
     return (
-      <div className="commentInput">
-        <form onSubmit={this.addComment}>
-          <input
-            type="text"
-            onChange={this.handleCommentValue}
-            placeholder="enter comment"
-            value={commentValue}
-          />
-          <button
-            className="addCommentBtn"
-            type="submit"
-            onClick={this.addComment}
-          >
-            Click
-          </button>
-        </form>
+      <div className="comment">
+        <ul>
+          {commentList.map(comment => {
+            return (
+              <Comment
+                key={comment.id}
+                name={comment.userName}
+                comment={comment.content}
+              />
+            );
+          })}
+        </ul>
       </div>
     );
   }
 }
 
-export default Comment;
+export default CommentList;
