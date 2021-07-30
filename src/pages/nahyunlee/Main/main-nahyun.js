@@ -30,10 +30,10 @@ class Main extends React.Component {
   addCommEnter = e => {
     if (e.key === 'Enter') {
       this.addComment();
+      this.setState({
+        value: '',
+      });
     }
-    this.setState({
-      value: '',
-    });
   };
 
   render() {

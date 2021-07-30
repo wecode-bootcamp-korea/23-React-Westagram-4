@@ -1,6 +1,6 @@
 import React from 'react';
 //import {Link} from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import './LoginNa.scss';
 
 class Login extends React.Component {
@@ -77,9 +77,9 @@ class Login extends React.Component {
             로그인
           </button>
         </div>
-        <a href="/" className="helpPassword">
+        <Link href="/" className="helpPassword">
           비밀번호를 잊으셨나요?
-        </a>
+        </Link>
       </div>
     );
   }
