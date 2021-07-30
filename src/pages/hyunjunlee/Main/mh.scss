@@ -1,0 +1,25 @@
+.mainhyun {
+  position: relative;
+  top: 45px;
+  background: #f8f9fa;
+
+  .containerhyun {
+    display: flex;
+    max-width: 1066px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .contents_left {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contents_right {
+    display: none;
+    transition: transform 0.1s ease;
+  }
+}

@@ -1,0 +1,54 @@
+@mixin flex($flex-direction, $justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.input-all {
+  font-size: 12px;
+  @include wh(250px, 35px);
+  // width: 250px;
+  // height: 35px;
+  padding: 0px 0px 0px 8px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  background-color: #fafafa;
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-container {
+  @include wh(250px, 30px);
+  // width: 250px;
+  // height: 30px;
+  margin: 8px 40px 8px 40px;
+  @include flex(row, space-evenly);
+  // display: flex;
+  // justify-content: space-evenly;
+  // align-items: center;
+  // flex-direction: row;
+  .button-login {
+    @include wh(250px, 30px);
+    // width: 250px;
+    // height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #b2dffc;
+    color: white;
+  }
+  .button-canlogin {
+    @include wh(250px, 30px);
+    // width: 250px;
+    // height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1174b6;
+    color: white;
+  }
+}
