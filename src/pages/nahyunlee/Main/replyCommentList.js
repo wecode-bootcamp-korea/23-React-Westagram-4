@@ -5,12 +5,7 @@ class Child extends Component {
     return (
       <>
         {this.props.commentList2.map((comm, idx) => {
-          return (
-            <li key={idx}>
-              {' '}
-              <b>hyen43</b> {comm}{' '}
-            </li>
-          );
+          return <li key={idx}> hyen43 {comm} </li>;
         })}
       </>
     );

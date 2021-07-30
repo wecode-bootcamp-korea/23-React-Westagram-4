@@ -5,7 +5,7 @@ import Child from '../Main/replyCommentList';
 
 import './MainNa.scss';
 
-class Main extends React.Component {
+class MainNa extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -230,4 +230,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default MainNa;

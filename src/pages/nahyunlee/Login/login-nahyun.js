@@ -3,13 +3,12 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import './LoginNa.scss';
 
-class Login extends React.Component {
+class LoginNa extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       idValue: '',
       pwValue: '',
-      //buttonOn : false,
     };
   }
 
@@ -85,4 +84,4 @@ class Login extends React.Component {
   }
 }
 
-export default withRouter(Login);
+export default withRouter(LoginNa);
