@@ -9,104 +9,40 @@
   height: $height;
 }
 
-* {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  box-sizing: border-box;
-}
-
-body {
+#jinsoo-div {
   background-color: #fafafa;
-  section {
+  .section-ff {
     @include flex(column);
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-direction: column;
     #login-container {
       @include wh(935px, 618px);
-      // width: 935px;
-      // height: 618px;
       margin-top: 32px;
       @include flex(row, space-evenly);
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: space-evenly;
     }
   }
 }
 
-#section-main {
+.section-main {
   @include wh(350px, 606px);
-  // width: 350px;
-  // height: 606px;
   margin-top: 30px;
   margin-left: -88px;
   @include flex(none, stretch);
-  // display: flex;
-  // justify-content: stretch;
   .top {
     @include wh(348px, 358px);
-    // width: 348px;
-    // height: 358px;
     border: 1px solid lightgrey;
     @include flex(column, space-evenly);
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-evenly;
     background-color: #ffffff;
-    // align-items: center;
     #logo {
       @include wh(300px, 70px);
-      // width: 200px;
-      // height: 70px;
       margin: 22px auto 10px;
+      text-align: center;
       font-size: 45px;
       font-family: 'Lobster', cursive;
     }
   }
 }
 
-.input-all {
-  font-size: 12px;
-  @include wh(250px, 35px);
-  // width: 250px;
-  // height: 35px;
-  padding: 9px 0px 7px 8px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  background-color: #fafafa;
-  &:focus {
-    outline: none;
-  }
-}
-
-.button-container {
-  @include wh(250px, 30px);
-  // width: 250px;
-  // height: 30px;
-  margin: 8px 40px 8px 40px;
-  @include flex(row, space-evenly);
-  // display: flex;
-  // justify-content: space-evenly;
-  // align-items: center;
-  // flex-direction: row;
-  .button-login {
-    @include wh(250px, 30px);
-    // width: 250px;
-    // height: 30px;
-    border: 0;
-    border-radius: 5px;
-    background-color: #b2dffc;
-    color: white;
-  }
-}
-
 #or-container {
   @include flex(row, space-evenly);
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-evenly;
   width: 250px;
   border: 0;
   .dash {
@@ -130,13 +66,7 @@ body {
   margin-bottom: 3px;
   #button-facebook {
     @include wh(170px, 15px);
-    // width: 170px;
-    // height: 15px;
     @include flex(row, space-evenly);
-    // display: flex;
-    // justify-content: space-evenly;
-    // align-items: center;
-    // flex-direction: row;
     border: 0;
     background: 0;
     margin-top: 20px;
@@ -147,8 +77,6 @@ body {
     background-position: -347px -329px;
     background-repeat: no-repeat;
     @include wh(16px, 16px);
-    // height: 16px;
-    // width: 16px;
     margin-bottom: 1px;
   }
   #facebook-span {
@@ -167,12 +95,7 @@ body {
 
 .mid {
   @include flex(none);
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   @include wh(348px, 41px);
-  // width: 348px;
-  // height: 41px;
   padding: 28px 0px;
   border: 1px solid lightgrey;
   margin-top: 10px;
@@ -194,20 +117,11 @@ body {
 
 .bot {
   @include flex(column);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   @include wh(350px, 102px);
-  // width: 350px;
-  // height: 102px;
   .download-container {
     margin-top: 5px;
     width: 285px;
     @include flex(none, space-around);
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
     .img-download {
       height: 40px;
     }
@@ -216,21 +130,11 @@ body {
 
 #footer {
   @include flex(column);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   @include wh(700px, 150px);
-  // width: 700px;
-  // height: 150px;
   font-size: 12px;
   color: grey;
   .button-list {
     @include flex(row);
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    // align-items: center;
     .button-info {
       list-style: 0;
       margin: 0 8px;

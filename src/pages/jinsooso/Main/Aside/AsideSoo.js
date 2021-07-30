@@ -102,7 +102,7 @@ class AsideSoo extends React.Component {
             <div className="story-feed rec-bot">
               <img
                 alt="img"
-                src="https://wecode.co.kr/static/media/performance-coach.c43beb45.png"
+                src="https://wecode.co.kr/img/StaffInfo/performance-coach.png"
                 className="circle-icon"
               ></img>
               <div className="story-feed-right rec-new-mid">
