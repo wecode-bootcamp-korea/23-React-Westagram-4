@@ -1,49 +1,55 @@
 import React from 'react';
-import './Main.scss';
+//import CommentList from '../Comment/CommentList';
+import Nav from '../../../components/Nav/Nav';
+import Child from '../Main/replyCommentList';
 
-class Main extends React.Component {
+import './MainNa.scss';
+
+class MainNa extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      value: '',
+      commentList2: [],
+    };
+  }
+
+  handleChange = e => {
+    this.setState({
+      value: e.target.value,
+    });
+  };
+
+  addComment = () => {
+    this.setState({
+      commentList2: this.state.commentList2.concat([this.state.value]),
+      value: '',
+    });
+  };
+
+  addCommEnter = e => {
+    if (e.key === 'Enter') {
+      this.addComment();
+      this.setState({
+        value: '',
+      });
+    }
+  };
+
   render() {
     return (
-      <div className="main">
-        <nav className="mainpage">
-          <div className="mainpageWidth">
-            <img
-              className="logo"
-              src="images/nahyunlee/instalogo.png"
-              alt="logo"
-            />
-            <input className="search" type="text" placeholder="검색" />
-            <ul className="navimg">
-              <li>
-                <img
-                  className="navicon1"
-                  alt="exploreIcon"
-                  src="img/explore.png"
-                />
-              </li>
-              <li>
-                <img
-                  className="navicon2"
-                  alt="heartIcon"
-                  src="images/nahyunlee/heart.png"
-                />
-              </li>
-              <li>
-                <img
-                  className="nhprofile"
-                  alt="profile"
-                  src="img/profile.jpg"
-                />
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <div className="mainNa">
+        <Nav />
 
         <div className="mainArticles">
           <div className="feeds">
             <article className="article">
               <div className="account">
-                <img className="profile" src="images/nahyunlee/profile.jpg" />
+                <img
+                  className="profile"
+                  src="images/nahyunlee/profile.jpg"
+                  alt="profile"
+                />
                 <p className="accountName">
                   <b>hyonii_xx</b>
                 </p>
@@ -77,22 +83,33 @@ class Main extends React.Component {
 
               <div className="desContainer">
                 <p className="likes">좋아요 1,019개</p>
-                <p className="description">
-                  <b>hyonii_xx</b> 저 오늘 졸업했어요. 2019년 2월 졸업이었는데
-                  코로나때문에 졸업이 연기되면서 2019년 7월 졸업식에 참여했어요.
-                  졸업식 가운을 입고 열심히 돌아다니는데 땀 퐁퐁퐁.. 이 더위를
-                  식혀줄 무언가가 필요해;;
-                </p>
+                <ul className="description">
+                  <li className="descriptionId">hyonii_xx</li>
+                  <li className="descriptionDetail">
+                    저 오늘 졸업했어요. 2019년 2월 졸업이었는데 코로나때문에
+                    졸업이 연기되면서 2019년 7월 졸업식에 참여했어요. 졸업식
+                    가운을 입고 열심히 돌아다니는데 땀 퐁퐁퐁.. 이 더위를 식혀줄
+                    무언가가 필요해;;
+                  </li>
+                </ul>
+                <ul className="inputReply">
+                  <Child commentList2={this.state.commentList2} />
+                </ul>
                 <p className="time">41분 전</p>
               </div>
               <div className="replyContainer">
                 <i className="far fa-grin"></i>
                 <input
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  onKeyPress={this.addCommEnter}
                   className="reply"
                   type="text"
                   placeholder="댓글 달기..."
                 />
-                <button className="replybutton">게시</button>
+                <button onClick={this.addComment} className="replybutton">
+                  게시
+                </button>
               </div>
             </article>
           </div>
@@ -213,4 +230,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default MainNa;
