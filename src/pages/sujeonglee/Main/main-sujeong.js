@@ -9,7 +9,7 @@ class MainSu extends React.Component {
     return (
       <div>
         <Nav />
-        <div id="containerColor">
+        <div className="containerColor">
           <main className="mainContainer">
             <Feed />
             <Aside />

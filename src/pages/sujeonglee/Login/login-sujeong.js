@@ -8,14 +8,9 @@ class LoginSu extends React.Component {
     this.state = {
       userId: '',
       userPw: '',
-      buttonOn: false,
     };
   }
-  ButtonColor = () => {
-    this.state.userId.includes('@') && this.state.userPw.length >= 5
-      ? this.setState({ buttonOn: true })
-      : this.setState({ buttonOn: false });
-  };
+
   handleIuput = e => {
     const { value, name } = e.target;
     this.setState({
@@ -25,7 +20,9 @@ class LoginSu extends React.Component {
   };
 
   goToMain = () => {
-    this.props.history.push('/main-sujeong');
+    this.state.userId.includes('@') && this.state.userPw.length >= 5
+      ? this.props.history.push('/main-sujeong')
+      : alert('양식에 맞춰 작성해주세요');
   };
 
   render() {
@@ -34,11 +31,7 @@ class LoginSu extends React.Component {
         <div className="loginContainer">
           <h1>Westagram</h1>
 
-          <form
-            action="/Main"
-            className="loginform"
-            onChange={this.ButtonColor}
-          >
+          <form className="loginform">
             <input
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -56,10 +49,12 @@ class LoginSu extends React.Component {
               onChange={this.handleIuput}
             />
             <button
-              onClick={this.goToMain}
               className={`btnLogin ${
-                this.state.buttonOn ? 'oncolor' : 'offcolor'
+                this.state.userId.includes('@') && this.state.userPw.length >= 5
+                  ? 'oncolor'
+                  : 'offcolor'
               }`}
+              onClick={this.goToMain}
             >
               로그인
             </button>
