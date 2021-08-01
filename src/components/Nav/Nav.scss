@@ -20,6 +20,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
 
     .logo {
       display: flex;
@@ -27,6 +28,7 @@
       justify-content: center;
       align-items: center;
       font-size: 25px;
+      padding-left: 20px;
 
       span {
         display: inline-block;
@@ -57,18 +59,16 @@
         font-size: 16px;
         outline: none;
         background-repeat: no-repeat;
-        background: "src/assets/background-images/pngwing.png" no-repeat;
+        background: 'src/assets/background-images/pngwing.png' no-repeat;
         background-position: 65px;
         background-size: 14px;
-         
         &:focus {
-            background-position: 10px;
+          background-position: 10px;
         }
         &::placeholder {
           text-align: center;
           font-size: 15px;
         }
-
         &:focus::-webkit-input-placeholder {
           color: transparent;
         }

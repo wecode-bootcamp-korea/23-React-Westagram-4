@@ -1,0 +1,62 @@
+{
+  "story": [
+    {
+      "id": 1,
+      "userName": "sujeong",
+      "information": "2분 전",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    },
+    {
+      "id": 2,
+      "userName": "sujeong",
+      "information": "2분 전",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    },
+    {
+      "id": 3,
+      "userName": "sujeong",
+      "information": "2분 전",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    },
+    {
+      "id": 4,
+      "userName": "sujeong",
+      "information": "2분 전",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    },
+    {
+      "id": 5,
+      "userName": "sujeong",
+      "information": "2분 전",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    }
+  ],
+  "recomment": [
+    {
+      "id": 1,
+      "userName": "sujeong",
+      "information": "hojung님 외 2명이...",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    },
+    {
+      "id": 2,
+      "userName": "sujeong",
+      "information": "hojung님 외 2명이...",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    },
+    {
+      "id": 3,
+      "userName": "sujeong",
+      "information": "hojung님 외 2명이...",
+      "alt": "profileimg",
+      "src": "https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
+    }
+  ]
+}

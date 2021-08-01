@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
-import './Nav.scss';
 import searchImg from '../../assets/background-images/pngwing.png';
-// import logo from "../../../public/images/hyunjunlee/instagram"
+import './Nav.scss';
+// import logo from '../../../public/images/hyunjunlee/instagram';
 
 class Nav extends React.Component {
   render() {

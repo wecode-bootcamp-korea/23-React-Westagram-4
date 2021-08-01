@@ -33,337 +33,225 @@ $theme-color: #fff;
   font-size: 16px;
 }
 
-.MainContainer {
-  /* nav */
-
-  .navHead {
+.containerColor {
+  background-color: #fafafa;
+  //main
+  .mainContainer {
+    width: 1060px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 40px;
     display: flex;
-    justify-content: center;
-    height: 80px;
-    border-bottom: 1px solid #dfdfdf;
-    background-color: $theme-color;
 
-    .navContainer {
-      @include flex-align-set;
-      justify-content: space-between;
-      width: 1000px;
-      background-color: $theme-color;
+    //피드
+    .feed {
+      display: inline-block;
+      width: 650px;
 
-      .navlogo {
-        .logo {
-          color: #222222;
-          font-family: 'Lobster', cursive;
-          font-size: 30px;
-        }
-      }
+      article {
+        background-color: $theme-color;
+        border: 1px solid #dfdfdf;
 
-      .search {
-        .searchBox {
-          width: 250px;
-          height: 30px;
-          border: 1px solid #dfdfdf;
-          border-radius: 5px;
-          box-sizing: content-box;
-          background-color: #fafafa;
-          background-image: url(http://www.clker.com/cliparts/w/r/Q/0/x/D/search-icon-light-grey-hi.png);
-          background-size: 14px;
-          background-repeat: no-repeat;
-          background-position: 42% center;
-          text-indent: 10%;
+        //피드상단
+        header {
+          height: 60px;
 
-          &:focus {
-            background-position: 4% center;
-            outline: none;
-          }
-
-          &::placeholder,
-          &:not(:focus) {
-            color: #ccc;
-            font-weight: 500;
-            text-align: center;
-          }
-
-          &:focus::-webkit-input-placeholder {
-            color: transparent;
-          }
-        }
-      }
-
-      .navicon {
-        display: flex;
-        justify-content: space-between;
-        width: 150px;
-
-        .navIcon {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
-}
-//main
-main {
-  width: 1000px;
-  margin: 0 auto;
-  padding-top: 70px;
-  padding-bottom: 40px;
-  display: flex;
-
-  //피드
-  .feed {
-    display: inline-block;
-    width: 600px;
-
-    article {
-      background-color: $theme-color;
-      border: 1px solid #dfdfdf;
-
-      //피드상단
-      header {
-        height: 60px;
-
-        .profileArticle {
-          @include flex-align-set;
-          justify-content: space-between;
-          padding-top: 10px;
-
-          .mainId {
+          .profileArticle {
             @include flex-align-set;
+            justify-content: space-between;
+            padding-top: 10px;
 
-            .profileImgBox {
-              width: 34px;
-              height: 34px;
-              @include profile-set;
+            .mainId {
+              @include flex-align-set;
 
-              .profileImg {
-                width: 100%;
-                height: 100%;
+              .profileImgBox {
+                width: 34px;
+                height: 34px;
+                @include profile-set;
+
+                .profileImg {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .profileName {
+                margin-left: 15px;
+
+                a {
+                  color: #2c2c2c;
+                  font-weight: 600;
+                }
               }
             }
-            .profileName {
-              margin-left: 15px;
 
-              a {
-                color: #2c2c2c;
-                font-weight: 600;
-              }
+            .profileIcon {
+              display: flex;
+              justify-self: end;
+              margin-right: 15px;
             }
           }
-
-          .profileIcon {
-            display: flex;
-            justify-self: end;
-            margin-right: 15px;
-          }
-        }
-      }
-
-      .mainImgBox {
-        width: 598px;
-        height: 600px;
-
-        .mainImg {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .feedIcon {
-        @include flex-align-set;
-        justify-content: space-between;
-        margin: 15px 0 15px 0px;
-
-        .leftIcon {
-          margin-left: 15px;
         }
 
-        .feedIconRight {
-          display: flex;
-          justify-content: end;
-          margin-right: 15px;
-        }
-      }
-      //피드하단
-      .feedLike {
-        @include flex-align-set;
+        .mainImgBox {
+          width: 648px;
+          height: 600px;
 
-        .likeImgBox {
-          width: 24px;
-          height: 24px;
-          @include profile-set;
-
-          .likeImg {
+          .mainImg {
             width: 100%;
             height: 100%;
           }
         }
-        .likeInfo {
-          margin-left: 10px;
 
-          a {
-            color: #2c2c2c;
+        .feedIcon {
+          @include flex-align-set;
+          justify-content: space-between;
+          margin: 15px 0 15px 0px;
+
+          .leftIcon {
+            margin-left: 15px;
           }
-          span {
-            font-weight: 800;
-          }
-        }
-      }
 
-      //시간
-      .timeLog {
-        margin: 10px 0 20px 20px;
-
-        span {
-          font-size: 14px;
-          color: #808080;
-        }
-      }
-
-      //뉴댓글
-      .commentRow {
-        margin: 10px 20px 0 20px;
-
-        .newComment {
-          margin-top: 5px;
-
-          .newCommentList {
+          .feedIconRight {
             display: flex;
-            justify-content: space-between;
-            height: 20px;
-            color: #2c2c2c;
-            font-size: 14px;
+            justify-content: end;
+            margin-right: 15px;
+          }
+        }
+        //피드하단
+        .feedLike {
+          @include flex-align-set;
 
-            .newCommentIcon {
-              @include flex-align-set;
+          .likeImgBox {
+            width: 24px;
+            height: 24px;
+            @include profile-set;
+
+            .likeImg {
+              width: 100%;
+              height: 100%;
             }
-            .delete {
-              margin: 4px 0 0 10px;
-              font-size: 16px;
-            }
-            .commenetUserId {
-              margin-right: 10px;
+          }
+          .likeInfo {
+            margin-left: 10px;
+
+            a {
               color: #2c2c2c;
-              font-size: 18px;
-              font-weight: 700;
             }
-
-            img.commentHeart {
-              width: 15px;
-              height: 15px;
+            span {
+              font-weight: 800;
             }
           }
         }
-      }
-      //댓글박스
-      .commentContainer {
-        display: flex;
-        width: 600px;
-        border-top: 1px solid #dfdfdf;
 
-        .commentBox {
-          width: 100%;
-          height: 50px;
-          margin: 0px 0px 0px 10px;
-          border-style: none;
-          background-color: $theme-color;
+        //시간
+        .timeLog {
+          margin: 10px 0 20px 20px;
 
-          &::placeholder {
-            color: #8e8e8e;
+          span {
+            font-size: 14px;
+            color: #808080;
           }
         }
 
-        .commentSubmit {
-          width: 50px;
-          height: 50px;
-          margin-right: 10px;
-          border-style: none;
-          background-color: $theme-color;
-          color: #0095f6;
-          opacity: 0.4;
+        //뉴댓글
+        .commentRow {
+          margin: 10px 20px 0 20px;
+
+          .newComment {
+            line-height: 20px;
+
+            .newCommentList {
+              display: flex;
+              justify-content: space-between;
+              color: #2c2c2c;
+              font-size: 14px;
+
+              .commentText {
+                margin-right: 20px;
+                word-break: break-all;
+              }
+
+              .newCommentIcon {
+                @include flex-align-set;
+              }
+              .delete {
+                margin: 4px 0 0 10px;
+                font-size: 16px;
+              }
+              .commenetUserId {
+                margin-right: 10px;
+                color: #2c2c2c;
+                font-size: 18px;
+                font-weight: 650;
+              }
+
+              img.commentHeart {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+        //댓글박스
+        .commentContainer {
+          display: flex;
+          width: 650px;
+          border-top: 1px solid #dfdfdf;
+
+          .commentBox {
+            width: 100%;
+            height: 50px;
+            margin: 0px 0px 0px 10px;
+            border-style: none;
+            background-color: $theme-color;
+
+            &::placeholder {
+              color: #8e8e8e;
+            }
+          }
+
+          .commentSubmit {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-style: none;
+            background-color: $theme-color;
+          }
+          .oncolor {
+            color: #0095f6;
+          }
+
+          .offcolor {
+            color: #dbedff;
+          }
         }
       }
     }
-  }
 
-  /* main right */
-  .mainRight {
-    display: inline-block;
-    width: 350px;
-    margin-left: 50px;
-
-    .myprofile {
-      @include flex-align-set;
-      margin-bottom: 20px;
-
-      .myprofileRight {
-        width: 60px;
-        height: 60px;
-        border-radius: 70%;
-        border: 1px solid #dfdfdf;
-        overflow: hidden;
-
-        .profileImg {
-          @include img-set;
-        }
-      }
-
-      .myprofileLeft {
-        margin-left: 15px;
-
-        .userId {
-          @include id-set;
-        }
-
-        .subTitle {
-          color: #8e8e8e;
-          font-size: 16px;
-        }
-      }
-    }
-
-    /*story*/
-
-    .story {
+    /* main right */
+    .mainRight {
+      display: inline-block;
       width: 350px;
-      height: 250px;
-      background-color: $theme-color;
-      border: 1px solid #dfdfdf;
-      overflow: scroll;
+      margin-left: 50px;
 
-      .storyHead {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px;
-
-        .storyLeft {
-          color: #808080;
-          font-weight: 700;
-        }
-
-        .storyRight {
-          font-size: 18px;
-          font-weight: 700;
-        }
-      }
-
-      .storyContent {
+      .myprofile {
         @include flex-align-set;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
-        .storyImg {
-          width: 40px;
-          height: 40px;
-          @include profile-set;
+        .myprofileRight {
+          width: 60px;
+          height: 60px;
+          border-radius: 70%;
+          border: 1px solid #dfdfdf;
+          overflow: hidden;
 
           .profileImg {
             @include img-set;
           }
         }
 
-        .storyId {
-          display: block;
-          margin-left: 10px;
+        .myprofileLeft {
+          margin-left: 15px;
 
           .userId {
             @include id-set;
@@ -375,50 +263,47 @@ main {
           }
         }
       }
-    }
-    //여기까지
-    /*recommend*/
 
-    .recommend {
-      width: 350px;
-      height: 230px;
-      margin-top: 20px;
-      background-color: $theme-color;
-      border: 1px solid #dfdfdf;
+      /*story*/
 
-      .recommendHead {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px;
+      .story {
+        width: 350px;
+        height: 250px;
+        background-color: $theme-color;
+        border: 1px solid #dfdfdf;
+        overflow: scroll;
 
-        .recommendLeft {
-          color: #808080;
-          font-weight: 700;
+        .storyHead {
+          display: flex;
+          justify-content: space-between;
+          margin: 20px;
+
+          .storyLeft {
+            color: #808080;
+            font-weight: 700;
+          }
+
+          .storyRight {
+            font-size: 18px;
+            font-weight: 700;
+          }
         }
 
-        .recommendRight {
-          font-size: 18px;
-          font-weight: 700;
-        }
-      }
-
-      .recommendContent {
-        @include flex-align-set;
-        justify-content: space-between;
-        margin-bottom: 15px;
-
-        .recommendContentLeft {
+        .storyContent {
           @include flex-align-set;
+          margin-bottom: 15px;
 
-          .recommendImg {
+          .storyImg {
             width: 40px;
             height: 40px;
             @include profile-set;
+
             .profileImg {
               @include img-set;
             }
           }
-          .recommendId {
+
+          .storyId {
             display: block;
             margin-left: 10px;
 
@@ -433,29 +318,87 @@ main {
           }
         }
       }
+      //여기까지
+      /*recommend*/
 
-      .recommendFollow {
-        display: flex;
-        justify-self: end;
-        margin-right: 20px;
+      .recommend {
+        width: 350px;
+        height: 230px;
+        margin-top: 20px;
+        background-color: $theme-color;
+        border: 1px solid #dfdfdf;
 
-        a {
-          color: #0095f6;
-          font-size: 14px;
+        .recommendHead {
+          display: flex;
+          justify-content: space-between;
+          margin: 20px;
+
+          .recommendLeft {
+            color: #808080;
+            font-weight: 700;
+          }
+
+          .recommendRight {
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+
+        .recommendContent {
+          @include flex-align-set;
+          justify-content: space-between;
+          margin-bottom: 15px;
+
+          .recommendContentLeft {
+            @include flex-align-set;
+
+            .recommendImg {
+              width: 40px;
+              height: 40px;
+              @include profile-set;
+              .profileImg {
+                @include img-set;
+              }
+            }
+            .recommendId {
+              display: block;
+              margin-left: 10px;
+
+              .userId {
+                @include id-set;
+              }
+
+              .subTitle {
+                color: #8e8e8e;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        .recommendFollow {
+          display: flex;
+          justify-self: end;
+          margin-right: 20px;
+
+          a {
+            color: #0095f6;
+            font-size: 14px;
+          }
         }
       }
-    }
-    /*information*/
-    .information {
-      margin-top: 20px;
+      /*information*/
+      .information {
+        margin-top: 20px;
 
-      span {
-        color: #aaa;
-        font-size: 14px;
-        line-height: 20px;
-      }
-      .infomark {
-        margin-top: 15px;
+        span {
+          color: #aaa;
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .infomark {
+          margin-top: 15px;
+        }
       }
     }
   }

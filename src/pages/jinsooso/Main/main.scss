@@ -9,47 +9,23 @@
   height: $height;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  @include wh(100vw, 100vh);
-  // width: 100vw;
-  // height: 100vh;
+#jinsoo-body {
   @include flex(column, flex-start);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: center;
+  margin-top: 50px;
+
   background-color: #fafafa;
-  nav {
+  #jinsoo-nav {
     width: 100%;
-    /* height: 60px; */
     @include flex(row, space-evenly);
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-around;
-    // align-items: center;
     border: 1px solid lightgrey;
     background-color: white;
     #logo-container {
       width: 120px;
       margin: 10px 0;
       @include flex(row, space-between);
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: space-between;
-      // align-items: center;
       .logo-a {
         margin-top: 5px;
         @include wh(25px, 25px);
-        // width: 25px;
-        // height: 25px;
         text-decoration: none;
         .fa-instagram {
           font-size: 20px;
@@ -64,12 +40,8 @@ body {
       }
       .instagram-a {
         @include wh(70px, 30px);
-        // width: 70px;
-        // height: 30px;
         #instagram {
-          @include wh(100%, 100%) // width: 100%;
-            // height: 100%;
-;
+          @include wh(100%, 100%);
         }
       }
     }
@@ -78,14 +50,10 @@ body {
 
 #input-container {
   @include wh(170px, 25px);
-  // width: 170px;
-  // height: 25px;
   border: 1px solid #fafafa;
   border-radius: 3px;
   #input {
     @include wh(100%, 100%);
-    // width: 100%;
-    // height: 100%;
     padding-left: 5px;
     color: darkgrey;
   }
@@ -102,13 +70,7 @@ body {
 
 #icon-container {
   @include wh(100px, 100%);
-  // width: 100px;
-  // height: 100%;
   @include flex(row, space-between);
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  // align-items: center;
 }
 
 .nav-icon {
@@ -116,43 +78,25 @@ body {
   height: 18px;
 }
 
-main {
-  @include flex(row, flex-end, flex-start);
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: flex-end;
-  // align-items: flex-start;
+#jinsoo-main {
+  @include flex(row, center, flex-start);
   margin: 45px 85px;
-  @include wh(50vw, 100vh);
+  @include wh(100%, 100%);
+
   #feeds-container {
-    @include wh(450px, 100%);
-    // width: 450px;
-    // height: 100%;
+    max-width: 615px;
+    width: 100%;
     border: 1px solid lightgrey;
-    #feeds {
+    .feeds {
       @include flex(column, stretch, stretch);
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: stretch;
-      // align-items: stretch;
       #owner {
-        height: 35px;
+        height: 40px;
         background-color: white;
         @include flex(row, space-between);
-        // display: flex;
-        // flex-direction: row;
-        // align-items: center;
-        // justify-content: space-between;
         #profile-container {
           @include wh(100px, 20px);
-          // width: 100px;
-          // height: 20px;
           margin-left: 6px;
           @include flex(row, space-between);
-          // display: flex;
-          // flex-direction: row;
-          // justify-content: space-between;
-          // align-items: center;
           text-decoration: none;
         }
         #more {
@@ -167,8 +111,6 @@ main {
 
 .circle-icon {
   @include wh(25px, 25px);
-  // width: 25px;
-  // height: 25px;
   border: 0.1px solid lightgrey;
   border-radius: 50px;
   object-fit: cover;
@@ -176,37 +118,27 @@ main {
 
 .owner-name {
   color: black;
-  font-size: 3px;
+  font-size: 11px;
   text-decoration: none;
   font-weight: bold;
   margin-left: 5px;
 }
 
 #picture-container {
-  @include wh(100.25%, 446px);
-  // height: 446px;
-  // width: 100.25%;
+  @include wh(100.25%, 100%);
   #picture {
     @include wh(100%, 100%);
-    // width: 100%;
-    // height: 100%;
     object-fit: cover;
   }
 }
 
 #contents-container {
-  /* height: 100%; */
-  /* width: 100%; */
   background-color: white;
   padding: 0 5px;
   #contents-icons {
     height: 30px;
     background-color: white;
     @include flex(row, space-between);
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // justify-content: space-between;
     margin-top: 3px;
     padding: 0 5px;
   }
@@ -214,55 +146,30 @@ main {
 
 #left-icons {
   @include wh(75px, 100%);
-  // height: 100%;
-  // width: 75px;
-  @include flex(row, space-between) // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // justify-content: space-between;
-;
+  @include flex(row, space-between);
 }
 
 #likes {
   @include flex(row, left);
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // justify-content: left;
-  /* height: 28px; */
-  /* padding-bottom: 8px; */
   #likes-icon {
     margin-left: 5px;
   }
 }
 
 .contents-reply {
-  font-size: 3px;
+  font-size: 0.5em;
   margin-left: 5px;
 }
 
 .small-icon {
   @include wh(17px, 17px);
-  // height: 17px;
-  // width: 17px;
 }
 
 #reply {
-  /* width: 100%; */
-  /* height: 40px; */
   @include flex(column, center, none);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   .reply-owner {
     @include wh(100%, 20px);
-    // width: 100%;
-    // height: 20px;
     @include flex(row, left);
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: left;
-    // align-items: center;
     #more-button {
       font-size: 3px;
       color: grey;
@@ -272,47 +179,32 @@ main {
 
 .reply-friends {
   position: relative;
-  bottom: 3px;
-  /* width: 100%; */
-  /* height: 20px; */
   @include flex(row, space-between);
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // justify-content: space-between;
   .reply-left {
     @include flex(row, left);
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // justify-content: left;
   }
   #white-heart {
     @include wh(10px, 10px);
-    // width: 10px;
-    // height: 10px;
     margin-right: 5px;
   }
 }
 
 .minutes-before {
   height: 20px;
-  margin-left: 5px;
+  margin: 3px 0 0 5px;
   color: grey;
   font-size: 3px;
 }
 
 #reply-container {
-  height: 30px;
   border-top: 1px solid lightgrey;
   background-color: white;
   .input-reply {
     margin-left: 7px;
     @include wh(91%, 95%);
-    // width: 91%;
-    // height: 95%;
     font-size: 10px;
     border: 0;
+    height: 30px;
     &:focus {
       outline: none;
     }
@@ -328,23 +220,21 @@ main {
   background-color: white;
 }
 
+@media (max-width: 828px) {
+  #aside {
+    display: none;
+  }
+}
+
 #aside {
   margin: 0 15px;
   @include wh(180px, 350px);
-  // width: 180px;
-  // height: 350px;
   .top {
     @include flex(row, space-between);
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // justify-content: space-between;
     height: 35px;
     margin-bottom: 10px;
     .top-icon {
       @include wh(35px, 35px);
-      // height: 35px;
-      // width: 35px;
     }
     .top-names {
       font-size: 3px;
@@ -361,17 +251,10 @@ main {
   background-color: white;
   height: 153px;
   @include flex(column, none, stretch);
-  // display: flex;
-  // flex-direction: column;
-  // align-items: stretch;
   border: 1px solid grey;
   overflow: hidden;
   .story-top {
     @include flex(row, space-between);
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // justify-content: space-between;
     font-size: 10px;
     font-weight: bold;
     padding: 10px 10px 0 10px;
@@ -384,16 +267,11 @@ main {
     }
   }
   .story-bot {
-    /* display: block; */
     padding: 0 5px;
     height: 100%;
     .story-feed {
       margin-top: 5px;
       @include flex(row, left);
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: left;
-      // align-items: center;
       .story-feed-right {
         margin-left: 5px;
         margin-top: 3px;
