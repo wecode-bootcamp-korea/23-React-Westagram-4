@@ -12,7 +12,7 @@ $theme-color: #fff;
   font-size: 16px;
 }
 
-.loginContainer {
+.LoginSu {
   @include flex-set;
   margin: 200px auto;
   width: 400px;
@@ -50,6 +50,14 @@ $theme-color: #fff;
       @include font-set;
     }
 
+    .oncolor {
+      background-color: #0095f6;
+    }
+
+    .offcolor {
+      background-color: #dbedff;
+    }
+
     .pwForgot {
       display: block;
       margin-top: 70px;
@@ -59,11 +67,4 @@ $theme-color: #fff;
       @include font-set;
     }
   }
-}
-.oncolor {
-  background-color: #0095f6;
-}
-
-.offcolor {
-  background-color: #dbedff;
 }

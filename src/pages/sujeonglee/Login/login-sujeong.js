@@ -28,7 +28,7 @@ class LoginSu extends React.Component {
   render() {
     return (
       <div>
-        <div className="loginContainer">
+        <div className="LoginSu">
           <h1>Westagram</h1>
 
           <form className="loginform">

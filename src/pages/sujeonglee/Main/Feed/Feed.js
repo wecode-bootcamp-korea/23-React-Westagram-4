@@ -13,7 +13,7 @@ class Feed extends React.Component {
                   <div className="profileImgBox">
                     <img
                       alt="프로필사진"
-                      src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
+                      src="https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
                       className="profileImg"
                     />
                   </div>

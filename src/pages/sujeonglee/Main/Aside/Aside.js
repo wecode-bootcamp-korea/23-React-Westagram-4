@@ -1,7 +1,29 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import StoryBox from '../Aside/storyBox/storyBox';
+import RecommentBox from '../Aside/recomment/recommentBox';
 
 class Aside extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      commentList: {},
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/sujeonglee/storyData.json')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          commentList: data,
+        });
+      });
+  }
+
   render() {
+    const { story, recomment } = this.state.commentList;
+
     return (
       <>
         <div className="mainRight">
@@ -9,7 +31,7 @@ class Aside extends React.Component {
             <div className="myprofileRight">
               <img
                 alt="프로필이미지"
-                src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
+                src="https://lh3.googleusercontent.com/proxy/qUfHOB6U1wdd_Llc8keOLJHfFr5H56RXSFh3DAeL3syR7nMu7LfVrgoqjFsOZNvUMoWhE5IWGz29nXc3kigpgUUrGwWPw1FQviCAiSMBByygGr6ZOYxV"
                 className="profileImg"
               />
             </div>
@@ -18,125 +40,8 @@ class Aside extends React.Component {
               <span className="subTitle">DDUBeeeee</span>
             </div>
           </div>
-          <div className="story">
-            <div className="storyHead">
-              <span className="storyLeft">스토리</span>
-              <span className="storyRight">모두 보기</span>
-            </div>
-            <div className="storyContent">
-              <div className="storyImg">
-                <img
-                  alt="프로필이미지"
-                  src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
-                  className="profileImg"
-                />
-              </div>
-              <div className="storyId">
-                <span className="userId">k_rystalee</span>
-                <span className="subTitle">16분 전</span>
-              </div>
-            </div>
-            <div className="storyContent">
-              <div className="storyImg">
-                <img
-                  alt="프로필이미지"
-                  src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
-                  className="profileImg"
-                />
-              </div>
-              <div className="storyId">
-                <span className="userId">k_rystalee</span>
-                <span className="subTitle">16분 전</span>
-              </div>
-            </div>
-            <div className="storyContent">
-              <div className="storyImg">
-                <img
-                  alt="프로필이미지"
-                  src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
-                  className="profileImg"
-                />
-              </div>
-              <div className="storyId">
-                <span className="userId">k_rystalee</span>
-                <span className="subTitle">16분 전</span>
-              </div>
-            </div>
-
-            <div className="storyContent">
-              <div className="storyImg">
-                <img
-                  alt="프로필이미지"
-                  src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
-                  className="profileImg"
-                />
-              </div>
-              <div className="storyId">
-                <span className="userId">k_rystalee</span>
-                <span className="subTitle">16분 전</span>
-              </div>
-            </div>
-          </div>
-          <div className="recommend">
-            <div className="recommendHead">
-              <span className="recommendLeft">회원님을 위한 추천</span>
-              <span className="recommendRight">모두 보기</span>
-            </div>
-            <div className="recommendContent">
-              <div className="recommendContentLeft">
-                <div className="recommendImg">
-                  <img
-                    alt="프로필이미지"
-                    src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
-                    className="profileImg"
-                  />
-                </div>
-                <div className="recommendId">
-                  <span className="userId">k_rystalee</span>
-                  <span className="subTitle">hojeong님 외 2명이....</span>
-                </div>
-              </div>
-              <span className="recommendFollow">
-                <a href="dasf">팔로우</a>
-              </span>
-            </div>
-            <div className="recommendContent">
-              <div className="recommendContentLeft">
-                <div className="recommendImg">
-                  <img
-                    alt="프로필이미지"
-                    src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
-                    className="profileImg"
-                  />
-                </div>
-                <div className="recommendId">
-                  <span className="userId">k_rystalee</span>
-                  <span className="subTitle">hojeong님 외 2명이....</span>
-                </div>
-              </div>
-              <span className="recommendFollow">
-                <a href="asf">팔로우</a>
-              </span>
-            </div>
-            <div className="recommendContent">
-              <div className="recommendContentLeft">
-                <div className="recommendImg">
-                  <img
-                    alt="프로필이미지"
-                    src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg"
-                    className="profileImg"
-                  />
-                </div>
-                <div className="recommendId">
-                  <span className="userId">k_rystalee</span>
-                  <span className="subTitle">hojeong님 외 2명이....</span>
-                </div>
-              </div>
-              <span className="recommendFollow">
-                <a href="safs">팔로우</a>
-              </span>
-            </div>
-          </div>
+          <StoryBox story={story} />
+          <RecommentBox recomment={recomment} />
           <div className="information">
             <span>
               Westagram 정보, 지원, 홍보센터, API, 채용 정보, 개인정보처리방침,
@@ -152,4 +57,4 @@ class Aside extends React.Component {
   }
 }
 
-export default Aside;
+export default withRouter(Aside);

@@ -1,8 +1,8 @@
 import React from 'react';
+import CommentChild from '../Feed/commentChild';
 import '../main-sujeong.scss';
 
 class CommentList extends React.Component {
-  Num = 0;
   constructor() {
     super();
     this.state = {
@@ -19,27 +19,20 @@ class CommentList extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
-    this.Num += 1;
-
+    const { commentList } = this.state;
+    const { userAdd } = this.props;
     const newComment = {
-      keyId: this.Num,
+      id: Math.random(),
       userName: 'sujeong',
       content: this.state.comment,
-      isLike: false,
+      isLiked: false,
     };
 
     this.state.comment &&
       this.setState({
-        commentList: this.state.commentList.concat(newComment),
+        commentList: commentList.concat(newComment),
         comment: '',
       });
-  };
-
-  addComment = e => {
-    if (e.keyCode === 13 && this.state.comment.length > 0) {
-      this.handleSubmit();
-    }
   };
 
   changeButtonIcon = e => {
@@ -47,9 +40,7 @@ class CommentList extends React.Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/commentData.json', {
-      method: 'GET',
-    })
+    fetch('http://localhost:3000/data/commentData.json')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -59,31 +50,25 @@ class CommentList extends React.Component {
   }
 
   render() {
-    const comments = this.state.commentList.map(reply => (
-      <li className="newCommentList" key={reply.keyId}>
-        <span className="commentText">
-          <span className="commenetUserId">{reply.userName}</span>
-          {reply.content}
-        </span>
-        <span className="newCommentIcon">
-          <img
-            alt="하트"
-            src={
-              this.state.isLiked === true
-                ? '/images/sujeonglee/heart_on.png'
-                : '/images/sujeonglee/heart.png'
-            }
-            className="commentHeart"
-            onClick={this.changeButtonIcon}
-          />
-          <span className="delete">X</span>
-        </span>
-      </li>
-    ));
+    const post = this.state.commentList;
+
     return (
       <>
         <div className="commentRow">
-          <ul className="newComment">{comments}</ul>
+          <ul className="newComment">
+            {post &&
+              post.map(reply => {
+                return (
+                  <CommentChild
+                    key={reply.id}
+                    userName={reply.userName}
+                    content={reply.content}
+                    isLiked={reply.isLiked}
+                    changeButtonIcon={this.changeButtonIcon}
+                  />
+                );
+              })}
+          </ul>
         </div>
         <div className="timeLog">
           <span>40분전</span>
@@ -95,7 +80,6 @@ class CommentList extends React.Component {
               placeholder="댓글 달기..."
               className="commentBox"
               onChange={this.handleComment}
-              onKeyUp={this.addComment}
               value={this.state.comment}
             />
             <button

@@ -217,6 +217,13 @@ $theme-color: #fff;
             border-style: none;
             background-color: $theme-color;
           }
+          .oncolor {
+            color: #0095f6;
+          }
+
+          .offcolor {
+            color: #dbedff;
+          }
         }
       }
     }
@@ -395,11 +402,4 @@ $theme-color: #fff;
       }
     }
   }
-}
-.oncolor {
-  color: #0095f6;
-}
-
-.offcolor {
-  color: #dbedff;
 }
